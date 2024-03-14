@@ -83,22 +83,30 @@ public class WafiLifeAutomation {
         Select select = new Select(addressField);
 
         // Select by Visible Text
-        select.selectByVisibleText("Option 1");
+        select.selectByVisibleText("Faridpur");
 
+
+        WebElement areaField = driver.findElement(By.id("billing_area"));
+        Select select2 = new Select(areaField);
+        select2.selectByVisibleText("বোয়ালমারী");
         // Select by Value
         // select.selectByValue("value1");
 
         // Select by Index
         // select.selectByIndex(0);
-        addressField.sendKeys("Augmedix BangLadesh");
+        WebElement Thikana = driver.findElement(By.xpath("//textarea[@id='billing_address_1']"));
+        Thikana.sendKeys("Augmedix BangLadesh");
 
-        WebElement cityField = driver.findElement(By.name("city"));
-        cityField.sendKeys("Your City");
+        WebElement onnanno = driver.findElement(By.xpath("//div[@class='body-wrapper']//button[2]"));
+        onnanno.sendKeys("Please do inform before delivery");
 
         // Add more fields as required
 
         // Step 10: Log out
-        WebElement logoutButton = driver.findElement(By.xpath("//button[contains(text(),'Log Out')]"));
+
+        WebElement AmarACC = driver.findElement(By.xpath("//div[@class='login-links']//a[@title='আমার অ্যাকাউন্ট'][contains(text(),'আমার অ্যাকাউন্ট')]"));
+        AmarACC.click();
+        WebElement logoutButton = driver.findElement(By.xpath("//a[contains(text(),'লগআউট')]"));
         logoutButton.click();
 
         // Close the browser session
