@@ -78,9 +78,11 @@ public class WafiLifeAutomation {
 
 //        // Locate the dropdown element
 //        WebElement dropdown = driver.findElement(By.id("dropdownId"));
+        addressField.click();
 
         // Create a Select object
         Select select = new Select(addressField);
+
 
         // Select by Visible Text
         select.selectByVisibleText("Faridpur");
