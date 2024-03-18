@@ -72,23 +72,23 @@ public class WafiLifeAutomation {
         WebElement nameField = driver.findElement(By.name("billing_first_name"));
         nameField.sendKeys("Foysal BHai On Board");
 
+        //driver.findElement(By.xpath("//span[@id='select2-billing_state-container']")).click();
 
-
-        WebElement addressField = driver.findElement(By.id("select2-billing_state-container"));
+        WebElement addressField = driver.findElement(By.xpath("//select[@id= \"billing_state\"]"));
 
 //        // Locate the dropdown element
 //        WebElement dropdown = driver.findElement(By.id("dropdownId"));
-        addressField.click();
+//        addressField.click();
+
 
         // Create a Select object
         Select select = new Select(addressField);
 
-
         // Select by Visible Text
         select.selectByVisibleText("Faridpur");
 
-
         WebElement areaField = driver.findElement(By.id("billing_area"));
+        areaField.click();
         Select select2 = new Select(areaField);
         select2.selectByVisibleText("বোয়ালমারী");
         // Select by Value
@@ -99,10 +99,49 @@ public class WafiLifeAutomation {
         WebElement Thikana = driver.findElement(By.xpath("//textarea[@id='billing_address_1']"));
         Thikana.sendKeys("Augmedix BangLadesh");
 
-        WebElement onnanno = driver.findElement(By.xpath("//div[@class='body-wrapper']//button[2]"));
+        WebElement onnanno = driver.findElement(By.xpath("//textarea[@id='order_comments']"));
         onnanno.sendKeys("Please do inform before delivery");
 
         // Add more fields as required
+
+//        //extended
+//        //extended
+//        //extended
+//        //extended
+//        //extended
+//        //extended
+//        //extended
+//        //extended
+//
+//
+//        WebElement diffShipAddress = driver.findElement(By.xpath("//label[@for='ship-to-different-address-checkbox']"));
+//        diffShipAddress.click();
+//
+//        WebElement nameField2 = driver.findElement(By.name("shipping_first_name"));
+//        nameField2.sendKeys("Abdur Rahman on Board");
+//
+//        WebElement Semail = driver.findElement(By.xpath("//input[@id='shipping_email']"));
+//
+//        //driver.findElement(By.xpath("//span[@id='select2-billing_state-container']")).click();
+//
+//        WebElement addressField2 = driver.findElement(By.xpath("//select[@id= \"shipping_state\"]"));
+//
+////        // Locate the dropdown element
+////        WebElement dropdown = driver.findElement(By.id("dropdownId"));
+////        addressField.click();
+//
+//
+//        // Create a Select object
+//        Select select3 = new Select(addressField);
+//
+//
+//        // Select by Visible Text
+//        select3.selectByVisibleText("Faridpur");
+//
+//
+//        WebElement areaField2 = driver.findElement(By.id("billing_area"));
+//        Select select4 = new Select(areaField2);
+//        select4.selectByVisibleText("বোয়ালমারী");
 
         // Step 10: Log out
 
